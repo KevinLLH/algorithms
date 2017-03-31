@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Created by llh on 17-3-31.
+ * 自定义mapTree
  */
 class MapTree{
     private Map<String,String> map_up = new HashMap<>();
@@ -14,8 +14,8 @@ class MapTree{
 
     /**
      * 为自定义的map添加元素，分别为孩子-父亲map添加，和父亲-孩子map添加
-     * @param child
-     * @param parent
+     * @param child 孩子节点
+     * @param parent 父亲节点
      */
     public void add(String child,String parent){
         map_up.put(child,parent);
@@ -29,13 +29,18 @@ class MapTree{
 
     /**
      * 根据孩子获取父亲节点信息
-     * @param child
+     * @param child 孩子节点
      * @return 返回父亲节点字符串
      */
     public String getParent(String child){
         return map_up.get(child);
     }
 
+    /**
+     * 根据父亲节点获取孩子节点的信息
+     * @param parent 父亲节点
+     * @return 返回孩子节点信息
+     */
     public List<String> getChild(String parent){
         return map_down.get(parent);
     }
