@@ -21,7 +21,7 @@ public class TreeSelectSort {
 
         }
         while (true){
-            if(a[temp_tree[node_num]-1]==Integer.MAX_VALUE) break;
+            if(a[temp_tree[node_num-1]]==Integer.MAX_VALUE) break;
             System.out.println(a[temp_tree[node_num-1]]);
             a[temp_tree[node_num-1]] = Integer.MAX_VALUE;
             for (int i = 0; i < node_num-1; i+=2) {
